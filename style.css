@@ -614,3 +614,16 @@ main > * {
     text-align: center;
   }
 }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+} /* holder footeren nede i bunden */
+.lay-header,
+.lay-footer {
+  flex: none;
+  width: 100%;
+}
