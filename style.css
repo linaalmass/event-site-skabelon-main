@@ -627,3 +627,476 @@ main {
   flex: none;
   width: 100%;
 }
+/************************** forside ****************************/
+.hero {
+  width: 100%;
+  max-width: none;
+  min-height: 450px;
+  background-color: rgb(228, 206, 177);
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.overskrift {
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 55px;
+  font-weight: normal;
+  line-height: 1, 2;
+  margin-bottom: 35px;
+}
+
+.knap {
+  display: inline-block;
+  background-color: rgb(129, 73, 62);
+  color: white;
+  text-decoration: none;
+  padding: 17px 45px;
+  font-size: 13px;
+  font-weight: 400;
+  transition: 0.3s;
+  margin-top: 30px;
+}
+
+.hero-content {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 0;
+}
+
+.hero-content {
+  font-size: 16px;
+}
+
+.knap :hover {
+  background-color: #4e1c18;
+}
+
+/*********************************** billede section ********************************/
+
+.univers {
+  text-align: center;
+  padding: 10px 50px 40px;
+  background-color: rgba(233, 232, 217, 0.88);
+}
+
+.univers h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 27px;
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.billede img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.billede p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.billede img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.billede img:hover {
+  transform: scale(1.1);
+}
+
+/************************** generel styling ********************/
+
+.about {
+  background-color: rgb(228, 206, 177);
+  text-align: center;
+  padding: 60px 150px 70px;
+  min-height: 230px;
+}
+
+.about h2 {
+  font-size: 38px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.about p {
+  font-size: 17px;
+  line-height: 1.4;
+  color: black;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/*********************** udforsk messen ************************/
+
+.explore {
+  height: 400px;
+  width: 100%;
+  background-image:
+    linear-gradient(rgba(40, 35, 30, 0.6), rgba(40, 35, 30, 0.6)),
+    url(imgs/Skærmbillede\ 2026-11-16\ kl.\ 10.58.08.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.explore-content {
+  padding-left: 60px;
+  max-width: 600px;
+  color: white;
+}
+
+.explore-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.explore-content h2 {
+  font-size: 27px;
+  font-weight: normal;
+  margin-bottom: 25px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/********************** opsamlings siden **************************/
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body.layali-page {
+  background-color: rgb(228, 206, 177);
+  color: #421b20;
+  font-family: Georgia, serif;
+}
+
+.layali-page main {
+  width: 100%;
+  max-width: none;
+  background-color: rgb(228, 206, 177);
+}
+
+.opsamling-placeholder {
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  background-color: rgb(228, 206, 177);
+}
+
+.confirmation {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 65px 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 65px;
+}
+
+.confirmation-info {
+  flex: 2;
+  min-width: 0;
+  text-align: center;
+}
+
+.confirmation h1 {
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: normal;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 15px 0 25px;
+}
+
+.welcome-text {
+  font-size: 19px;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto;
+}
+body:has(.opsamling-placeholder) {
+  background-color: rgb(228, 206, 177);
+  margin: 0;
+  padding: 0;
+}
+
+body:has(.opsamling-placeholder) main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(228, 206, 177);
+}
+
+body:has(.opsamling-placeholder) .opsamling-placeholder {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  background-color: rgb(228, 206, 177);
+}
+
+/****************** personlig liste ******************/
+
+.personal-details {
+  background-color: #f0e4d7;
+  border: 1px solid #d7bea5;
+  border-radius: 20px;
+
+  max-width: 700px;
+  margin: 25px auto;
+  padding: 25px 35px;
+}
+
+.personal-details h2 {
+  font-size: 25px;
+  font-weight: normal;
+  margin: 0 0 20px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 13px 0;
+  border-bottom: 1px solid #d7bea5;
+  text-align: left;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row strong {
+  color: #521b22;
+}
+
+.detail-row span {
+  color: #493729;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+/*********************** dato, sted og oplevelse *********************/
+
+.event-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+
+  background-color: #e9d7c5;
+  border-radius: 30px;
+  padding: 25px 15px;
+  margin: 25px auto;
+}
+
+.event-details > div {
+  flex: 1;
+  text-align: center;
+}
+
+.event-details > div + div {
+  border-left: 1px solid #b58d4f;
+}
+
+.event-details h3 {
+  color: #521b22;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.event-details p {
+  font-size: 16px;
+  margin: 0;
+}
+
+#personalMessage {
+  font-size: 19px;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 30px auto;
+}
+
+/************************ knapper ***********************'*/
+
+.back-button,
+.primary-button {
+  display: inline-block;
+  background-color: #521b22;
+  color: white;
+  border: none;
+  border-radius: 40px;
+
+  padding: 16px 40px;
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-button:hover,
+.primary-button:hover {
+  background-color: #85483e;
+  transform: translateY(-3px);
+}
+
+/**************************** QR **************************/
+
+.qr-section {
+  flex: 1;
+  min-width: 290px;
+  max-width: 370px;
+
+  text-align: center;
+  color: #fff8ee;
+
+  background: linear-gradient(145deg, #421b20, #672b30);
+
+  border: 3px double #c7a268;
+  border-radius: 20px;
+
+  padding: 40px 25px;
+
+  box-shadow: 0 15px 35px rgba(66, 27, 32, 0.2);
+}
+
+.ticket-label {
+  letter-spacing: 5px;
+  font-size: 13px;
+  color: #d7b783;
+}
+
+.qr-section h2 {
+  font-size: 31px;
+  font-style: italic;
+  font-weight: normal;
+  margin: 20px 0;
+}
+
+.ticket-decoration {
+  color: #c7a268;
+  font-size: 23px;
+  margin: 15px 0;
+}
+
+.qr-code {
+  display: block;
+  width: 220px;
+  max-width: 100%;
+
+  background-color: white;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.qr-section p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ticket-footer {
+  font-size: 11px !important;
+  letter-spacing: 2px;
+  color: #d7b783;
+}
+.ticket-decoration {
+  display: none;
+}
+
+/* MOBIL */
+
+@media (max-width: 850px) {
+  .confirmation {
+    flex-direction: column;
+    padding: 35px 20px;
+    gap: 40px;
+  }
+
+  .confirmation-info {
+    width: 100%;
+  }
+
+  .confirmation h1 {
+    font-size: 36px;
+  }
+
+  .qr-section {
+    width: 100%;
+    max-width: 370px;
+  }
+
+  .site-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .event-details {
+    flex-direction: column;
+  }
+
+  .event-details > div + div {
+    border-left: none;
+    border-top: 1px solid #b58d4f;
+    padding-top: 15px;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .detail-row span {
+    text-align: left;
+  }
+
+  .personal-details {
+    padding: 25px 20px;
+  }
+
+  .form-card {
+    padding: 30px 20px;
+  }
+}

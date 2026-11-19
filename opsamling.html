@@ -17,26 +17,108 @@
         <button>Menu</button>
         <ul class="menu" id="menu" popover>
           <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html" aria-current="page">Formular</a></li>
+          <li><a href="./svg.html">Udforsk messen</a></li>
+          <li><a href="./form.html" aria-current="page">Tilmelding</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="opsamling-page">
-      <div class="opsamling-intro">
-        <h1>Opsamling</h1>
-        <p>Vis brugerens valg som et pass, en invitation eller noget andet, der passer til dit event.</p>
-        <div class="actions">
-          <a class="button" href="./form.html">Tilbage til formular</a>
-        </div>
-      </div>
+    <article class="opsamling-placeholder">
 
-      <article class="opsamling-placeholder"></article>
-    </section>
+      <section class="confirmation">
+        <div class="confirmation-info">
+
+          <h1>Tak for din tilmelding!</h1>
+
+          <p class="welcome-text">
+            Kære <span id="guestName">Gæst</span>,
+            vi glæder os til at byde dig velkommen
+            til LAYALI Bryllupsmesse.
+          </p>
+
+          <div class="personal-details">
+
+            <h2>Dine tilmeldingsoplysninger</h2>
+
+            <div class="detail-row">
+              <strong>Fulde navn</strong>
+              <span id="fullName">Ikke angivet</span>
+            </div>
+
+            <div class="detail-row">
+              <strong>E-mail</strong>
+              <span id="email">Ikke angivet</span>
+            </div>
+
+            <div class="detail-row">
+              <strong>Telefonnummer</strong>
+              <span id="phone">Ikke angivet</span>
+            </div>
+
+            <div class="detail-row">
+              <strong>Antal deltagere</strong>
+              <span id="participants">Ikke angivet</span>
+            </div>
+
+          </div>
+          <div class="event-details">
+
+            <div>
+              <h3>Dato</h3>
+              <p>24.–25. august</p>
+            </div>
+
+            <div>
+              <h3>Sted</h3>
+              <p>København</p>
+            </div>
+
+            <div>
+              <h3>Din oplevelse</h3>
+              <p id="experience">Bryllupsinspiration</p>
+            </div>
+
+          </div>
+
+          <p id="personalMessage">
+            Glæd dig til en dag fyldt med
+            kærlighed, kultur og inspiration.
+          </p>
+
+          <a href="index.html" class="back-button">
+            Tilbage til forsiden →
+          </a>
+
+        </div>
+        <div class="qr-section">
+
+          <p class="ticket-label">LAYALI</p>
+
+          <h2>Dit event pass</h2>
+
+          <div class="ticket-decoration">✦</div>
+
+          <img src="imgs/qr-kode.png" alt="QR-kode til LAYALI Bryllupsmesse" class="qr-code">
+
+          <p>Scan QR-koden ved indgangen</p>
+
+          <div class="ticket-decoration">✦</div>
+
+          <p class="ticket-footer">
+            WHERE LOVE MEETS CULTURE
+          </p>
+
+        </div>
+
+      </section>
+
+    </article>
+
+
   </main>
+
 
   <footer class="site-footer">
     <div class="footer-content">
