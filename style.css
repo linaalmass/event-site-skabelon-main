@@ -251,3 +251,366 @@ main > * {
   color: inherit;
   text-decoration: none;
 }
+
+/* ===== Interaktiv SVG-side ===== */
+
+.svg-intro {
+  display: none;
+} /* skjuler den gamle overskrift */
+.svg-page {
+  padding: 0;
+}
+
+.svg-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr; /* tegning til venstre, panel til højre */
+  gap: 0;
+  align-items: stretch;
+  margin-top: 40px;
+}
+
+/* Venstre: tegningen */
+.svg-placeholder {
+  background: #dad7cc;
+  border: 0;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+}
+.svg-placeholder svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Højre: panelet */
+.panel {
+  background: #dbcba6;
+  border: 0;
+  padding: 48px 16px;
+}
+.panel h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  letter-spacing: 0.12em;
+  margin: 0 0 24px;
+  color: #000;
+}
+.panel-intro {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  margin: 0 0 32px;
+  color: #000;
+}
+
+/* Accordion: hvide bokse */
+.accordion {
+  display: grid;
+  gap: 16px;
+}
+.accordion-item {
+  background: #fff;
+  border: 0;
+  margin: 0;
+}
+.accordion-item summary {
+  list-style: none; /* skjuler standardpilen */
+  cursor: pointer;
+  padding: 28px 16px;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.25em;
+  color: #111;
+}
+.accordion-item summary::-webkit-details-marker {
+  display: none;
+}
+.accordion-item summary:hover {
+  background: #f6f1e4;
+}
+.accordion-item[open] {
+  background: #f6f1e4;
+}
+.accordion-item p {
+  margin: 0;
+  padding: 0 24px 24px;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Mobil: læg dem under hinanden */
+@media (max-width: 800px) {
+  .svg-layout {
+    grid-template-columns: 1fr;
+  }
+  .accordion-item summary {
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+  }
+}
+/* ===== Layali: header & footer ===== */
+
+/* ---------- Header ---------- */
+.lay-header {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border-bottom: 1px solid #ece8dc;
+}
+.lay-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo + navn til venstre, menu til højre */
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 10px clamp(16px, 4vw, 56px);
+  box-sizing: border-box;
+}
+.lay-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: auto; /* skubber menuen helt til højre */
+  text-decoration: none;
+  color: #1d1d1d;
+}
+.lay-brand__logo {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+.lay-brand__name {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.lay-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px 30px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.lay-nav a {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: #1d1d1d;
+  text-decoration: none;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+.lay-nav a:hover {
+  border-bottom-color: #dbcba6;
+}
+.lay-nav a[aria-current="page"] {
+  border-bottom-color: #b79d5e;
+}
+
+/* ---------- Footer ---------- */
+.lay-footer {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: #dbcba6;
+  color: #1d1d1d;
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+}
+.lay-footer * {
+  box-sizing: border-box;
+}
+.lay-footer p,
+.lay-footer h2 {
+  margin: 0;
+  color: inherit;
+}
+
+.lay-footer__inner {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px clamp(16px, 4vw, 40px) 44px;
+}
+
+/* Brand */
+.lay-footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.lay-footer__badge {
+  flex: none;
+  width: 110px;
+  height: 110px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden; /* skjuler logoets grå firkant */
+  box-shadow: 0 6px 18px rgba(80, 60, 20, 0.18);
+}
+.lay-footer__badge img {
+  width: 88%;
+  height: 88%;
+  object-fit: contain;
+  display: block;
+}
+.lay-footer__name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 10px !important;
+}
+.lay-footer__tagline {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #3a3220 !important;
+}
+
+/* Kolonner */
+.lay-footer__col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.lay-footer__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+  margin-bottom: 4px !important;
+  border-bottom: 1px solid rgba(29, 29, 29, 0.25);
+  width: 100%;
+}
+.lay-footer__col > a {
+  color: #1d1d1d;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  font-size: 0.98rem;
+  transition: transform 0.2s;
+}
+.lay-footer__col > a:hover {
+  transform: translateX(4px);
+}
+
+/* Sociale ikoner */
+.lay-social {
+  display: flex;
+  gap: 12px;
+  padding-top: 4px;
+}
+.lay-social a {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color: #1d1d1d;
+  transition:
+    transform 0.2s,
+    background 0.2s,
+    color 0.2s;
+}
+.lay-social a:hover {
+  background: #1d1d1d;
+  color: #fff;
+  transform: translateY(-3px);
+}
+.lay-social svg {
+  width: 21px;
+  height: 21px;
+  display: block;
+}
+
+/* Bundlinje */
+.lay-footer__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  width: 100%;
+  padding: 18px clamp(16px, 4vw, 56px);
+  border-top: 1px solid rgba(29, 29, 29, 0.2);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+.lay-footer__bar p {
+  margin: 0;
+}
+.lay-footer__bar a {
+  color: #1d1d1d;
+  text-decoration: none;
+}
+.lay-footer__bar a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---------- Mobil ---------- */
+@media (max-width: 800px) {
+  .lay-header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .lay-brand {
+    margin-right: 0;
+  }
+  .lay-brand__name {
+    font-size: 1.6rem;
+  }
+  .lay-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .lay-footer__brand {
+    flex-direction: column;
+    text-align: center;
+  }
+  .lay-footer__col {
+    align-items: center;
+    text-align: center;
+  }
+  .lay-footer__title {
+    text-align: center;
+  }
+  .lay-social {
+    justify-content: center;
+  }
+  .lay-footer__bar {
+    justify-content: center;
+    text-align: center;
+  }
+}
